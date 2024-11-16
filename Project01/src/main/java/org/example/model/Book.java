@@ -18,7 +18,7 @@ public class Book {
     private int copiesAvailable;
     private boolean isAvailable;
 
-    protected Book(String name, String author, String genre, int copiesAvailable) {
+    public Book(String name, String author, String genre, int copiesAvailable) {
         this.id = idCounter++;
         this.name = name;
         this.genre = genre;

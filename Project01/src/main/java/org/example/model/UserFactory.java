@@ -1,13 +1,13 @@
 package org.example.model;
 
 public class UserFactory {
-    public static User createUser(String type, String name, String Email){
+    public static User createUser(String type, String firstName,String lastName, String Email){
         if (type.equalsIgnoreCase("client")){
-            return new Client(name, Email);
+            return new Client(firstName,lastName, Email);
         }
         if (type.equalsIgnoreCase("librarian") ){
 
-            return new Librarian(name, Email);
+            return new Librarian(firstName,lastName, Email);
         }
         else{
             throw new IllegalArgumentException("Invalid user type");

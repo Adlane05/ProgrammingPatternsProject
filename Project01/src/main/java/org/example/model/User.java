@@ -12,13 +12,15 @@ import lombok.ToString;
 public class User {
     private static int idCounter = 1;
     private int id;
-    private String name;
+    private String firstName;
+    private String lastName;
     private String email;
     private Boolean isLibrarian;
 
-    protected User(String name, String email, Boolean isLibrarian) {
+    protected User(String firstName, String lastName, String email, Boolean isLibrarian) {
         this.id = idCounter++;
-        this.name = name;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.isLibrarian = isLibrarian;
     }

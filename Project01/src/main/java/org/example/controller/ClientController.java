@@ -9,11 +9,9 @@ import java.util.List;
 
 public class ClientController {
     private Client model;
-    private ClientView view; // Placeholder for Client UI interactions
 
-    public ClientController(Client model, ClientView view) {
+    public ClientController(Client model) {
         this.model = model;
-        this.view = view;
     }
 
     public boolean login(String email, String password) {

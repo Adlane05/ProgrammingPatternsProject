@@ -9,11 +9,9 @@ import java.util.List;
 
 public class LibrarianController {
     private Librarian model;
-    private LibrarianView view; // Placeholder for Librarian UI interactions
 
-    public LibrarianController(Librarian model, LibrarianView view) {
+    public LibrarianController(Librarian model) {
         this.model = model;
-        this.view = view;
     }
 
     public boolean login(String email, String password) {

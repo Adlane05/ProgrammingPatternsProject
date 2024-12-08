@@ -5,6 +5,7 @@ import lombok.Setter;
 import lombok.Getter;
 import lombok.ToString;
 
+
 @EqualsAndHashCode
 @ToString
 @Getter
@@ -24,4 +25,9 @@ public class User {
         this.email = email;
         this.isLibrarian = isLibrarian;
     }
+    protected User(Boolean isLibrarian) {
+        this.id = idCounter++;
+        this.isLibrarian = isLibrarian;
+    }
+
 }

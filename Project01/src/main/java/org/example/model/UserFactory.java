@@ -1,15 +1,41 @@
 package org.example.model;
 
 public class UserFactory {
-    public static User createUser(String type, String firstName,String lastName, String Email){
-        if (type.equalsIgnoreCase("client")){
-            return new Client(firstName,lastName, Email);
+    /**
+     * all args constructor
+     *
+     * @param type
+     * @param firstName
+     * @param lastName
+     * @param Email
+     * @return the created user
+     */
+    public static User createUser(String type, String firstName, String lastName, String Email) {
+        if (type.equalsIgnoreCase("client")) {
+            return new Client(firstName, lastName, Email);
         }
-        if (type.equalsIgnoreCase("librarian") ){
+        if (type.equalsIgnoreCase("librarian")) {
 
-            return new Librarian(firstName,lastName, Email);
+            return new Librarian(firstName, lastName, Email);
+        } else {
+            throw new IllegalArgumentException("Invalid user type");
         }
-        else{
+    }
+
+    /**
+     * empty args constructor
+     *
+     * @param type
+     * @return the user
+     */
+    public static User createUser(String type) {
+        if (type.equalsIgnoreCase("client")) {
+            return new Client();
+        }
+        if (type.equalsIgnoreCase("librarian")) {
+
+            return new Librarian();
+        } else {
             throw new IllegalArgumentException("Invalid user type");
         }
     }

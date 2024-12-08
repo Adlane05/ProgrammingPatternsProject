@@ -14,18 +14,17 @@ import java.util.List;
 @Setter
 public class Library {
     private List<Book> books = new ArrayList<Book>();
-    private List<User> users = new ArrayList<User>();
     public static Library instance;
 
     private Library(List<Book> books, List<User> users) {
         this.books = books;
-        this.users = users;
     }
+
     /**
      * Singleton method that ensures only one instance exists
      *
      * @param books parameters for the constructor
-     * @param users  parameters for the constructor
+     * @param users parameters for the constructor
      * @return the instance of the singleton
      */
     public static Library getInstance(List<Book> books, List<User> users) {

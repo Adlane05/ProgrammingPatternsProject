@@ -6,4 +6,8 @@ public class Client extends User {
         super(firstName,lastName, email, false); // Set isLibrarian to false
     }
 
+    public Client() {
+        super(false);
+
+    }
 }
